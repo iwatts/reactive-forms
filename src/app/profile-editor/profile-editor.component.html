@@ -1,4 +1,4 @@
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="profileForm" [connectForm]="profileForm$ | async" (ngSubmit)="onSubmit()">
   <label for="first-name">First Name: </label>
   <input id="first-name" type="text" formControlName="firstName" required>
 
