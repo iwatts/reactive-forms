@@ -53,9 +53,9 @@ export class ProfileEditorComponent {
   onSubmit() {
     // TODO: Use EventEmitter with form value
     console.warn(this.profileForm.value);
-    this.store.dispatch({
-      type: 'SUBMIT_FORM',
-      profileForm: this.profileForm.value
-    })
+    // this.store.dispatch({
+    //   type: 'SUBMIT_FORM',
+    //   profileForm: this.profileForm.value
+    // })
   }
 }

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 import { ConnectFormDirective } from './connect-form.directive';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,15 @@ import { ConnectFormDirective } from './connect-form.directive';
   imports: [
     BrowserModule,
     // other imports ...
+    StoreModule.forRoot({}),
     ReactiveFormsModule
   ],
   exports: [
     ConnectFormDirective
   ],
-  providers: [],
+  providers: [
+    StoreModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
